@@ -72,8 +72,111 @@
     <!-- Content Section -->
     <div class="py-16">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Destinasi Wisata</h2>
-        <!-- Add your content here -->
+        <h2 class="text-3xl font-bold text-center mb-12">Destinasi Wisata</h2>
+        
+        <!-- Horizontal Scrollable Cards -->
+        <div class="relative">
+          <!-- Scroll Container -->
+          <div class="overflow-x-auto pb-6 hide-scrollbar">
+            <div class="flex space-x-6 min-w-max px-4">
+              <!-- Card 1 -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-[350px] flex-shrink-0">
+                <img src="/images/wisata/wisata1.jpg" alt="Wisata 1" class="w-full h-64 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Pantai Taman Sari</h3>
+                  <p class="text-gray-600 mb-4">Nikmati keindahan pantai dengan pasir putih dan air yang jernih. Cocok untuk berenang dan berjemur.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#E49B0F] font-bold">Rp 25.000/orang</span>
+                    <button class="bg-[#E49B0F] text-white px-4 py-2 rounded-lg hover:bg-[#c98a0e] transition">Lihat Detail</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-[350px] flex-shrink-0">
+                <img src="/images/wisata/wisata2.jpg" alt="Wisata 2" class="w-full h-64 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Taman Bunga</h3>
+                  <p class="text-gray-600 mb-4">Taman bunga yang indah dengan berbagai jenis bunga. Tempat yang sempurna untuk berfoto.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#E49B0F] font-bold">Rp 15.000/orang</span>
+                    <button class="bg-[#E49B0F] text-white px-4 py-2 rounded-lg hover:bg-[#c98a0e] transition">Lihat Detail</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-[350px] flex-shrink-0">
+                <img src="/images/wisata/wisata3.jpg" alt="Wisata 3" class="w-full h-64 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Air Terjun Taman Sari</h3>
+                  <p class="text-gray-600 mb-4">Air terjun alami dengan pemandangan yang menyegarkan. Ideal untuk refreshing.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#E49B0F] font-bold">Rp 20.000/orang</span>
+                    <button class="bg-[#E49B0F] text-white px-4 py-2 rounded-lg hover:bg-[#c98a0e] transition">Lihat Detail</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-[350px] flex-shrink-0">
+                <img src="/images/wisata/wisata4.jpg" alt="Wisata 4" class="w-full h-64 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Kebun Raya</h3>
+                  <p class="text-gray-600 mb-4">Kebun raya dengan koleksi tanaman yang beragam. Cocok untuk edukasi dan rekreasi.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#E49B0F] font-bold">Rp 18.000/orang</span>
+                    <button class="bg-[#E49B0F] text-white px-4 py-2 rounded-lg hover:bg-[#c98a0e] transition">Lihat Detail</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-[350px] flex-shrink-0">
+                <img src="/images/wisata/wisata5.jpg" alt="Wisata 5" class="w-full h-64 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Desa Budaya</h3>
+                  <p class="text-gray-600 mb-4">Kunjungi desa budaya dan nikmati pertunjukan seni tradisional yang memukau.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#E49B0F] font-bold">Rp 30.000/orang</span>
+                    <button class="bg-[#E49B0F] text-white px-4 py-2 rounded-lg hover:bg-[#c98a0e] transition">Lihat Detail</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-[350px] flex-shrink-0">
+                <img src="/images/wisata/wisata6.jpg" alt="Wisata 6" class="w-full h-64 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2">Agrowisata</h3>
+                  <p class="text-gray-600 mb-4">Nikmati pengalaman bertani dan memetik buah langsung dari kebunnya.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#E49B0F] font-bold">Rp 22.000/orang</span>
+                    <button class="bg-[#E49B0F] text-white px-4 py-2 rounded-lg hover:bg-[#c98a0e] transition">Lihat Detail</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional: Scroll Buttons -->
+          <button 
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-10"
+            @click="scrollLeft"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button 
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-10"
+            @click="scrollRight"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -124,6 +227,14 @@ export default {
     },
     startCarousel() {
       setInterval(this.nextImage, 5000)
+    },
+    scrollLeft() {
+      const container = document.querySelector('.overflow-x-auto');
+      container.scrollBy({ left: -400, behavior: 'smooth' });
+    },
+    scrollRight() {
+      const container = document.querySelector('.overflow-x-auto');
+      container.scrollBy({ left: 400, behavior: 'smooth' });
     }
   },
   mounted() {
@@ -146,5 +257,14 @@ export default {
 .fade-enter-to,
 .fade-leave-from {
   opacity: 1;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style> 

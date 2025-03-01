@@ -4,10 +4,10 @@
     <nav class="bg-[#E49B0F] py-4">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold text-white">DEWATARI</div>
+          <div class="text-2xl font-bold text-white">Pesona Bungkutoko</div>
           <div class="space-x-6">
             <router-link to="/" class="text-white">Home</router-link>
-            <router-link to="/dewatari" class="text-white">Dewatari</router-link>
+            <router-link to="/dewatari" class="text-white">Bungkutoko</router-link>
             <router-link to="/produk-lokal" class="text-white">Produk Lokal</router-link>
             <router-link to="/paket-tour" class="text-white">Paket Tour</router-link>
             <router-link to="/informasi" class="text-white">Informasi</router-link>
@@ -62,9 +62,28 @@
         </button>
 
         <!-- Overlay Text -->
-        <div class="absolute inset-0 bg-opacity-40 flex flex-col items-center justify-center text-white z-5 rounded-lg" style="transform: translateY(120px);">
-          <h1 class="text-5xl font-bold mb-4">SELAMAT DATANG</h1>
-          <p class="text-xl">DEWATARI sebagai wadah layanan untuk berwisata di Desai Taman Sari</p>
+        <div class="absolute inset-0 bg-opacity-40 flex flex-col items-center justify-center text-white z-5 rounded-lg" style="transform: translateY(180px);">
+          <h1 class="text-5xl font-bold mb-4 shadow" style="font-family: 'Poppins', sans-serif;">SELAMAT DATANG</h1>
+          <p class="text-xl shadow" style="font-family: 'Poppins', sans-serif;">Pesona Bungkutoko sebagai wadah layanan untuk berwisata di Desai Taman Sari</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tentang Kami Section -->
+    <div class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="w-full md:w-1/2 pr-4">
+          <h2 class="text-3xl font-bold text-left mb-2" style="font-family: 'Inter', sans-serif; color: #323233; max-width: 80%;">Desa Wisata Bungkutoko</h2>
+          <span class="block w-1/9 h-1 bg-[#E49B0F] my-1 mb-7"></span>
+          <p class="text-left max-w-3xl mx-auto mb-4" style="font-family: 'Noto Sans', sans-serif; color: #929394; font-size: 14px;">
+            Website Pesona Bungkutoko memberikan layanan yang dapat digunakan wisatawan untuk mengetahui informasi pada objek wisata dengan mudah. Website ini bertujuan untuk memberikan informasi kepada masyarakat dan mempermudah wisatawan dalam merencanakan perjalanan berwisata. Dengan berbagai fitur yang ditawarkan, pengguna dapat dengan cepat menemukan informasi yang relevan dan terkini mengenai destinasi wisata, akomodasi, dan aktivitas yang tersedia. 
+          </p>
+          <p class="text-left max-w-3xl mx-auto" style="font-family: 'Noto Sans', sans-serif; color: #929394; font-size: 14px;">
+            Selain itu, website ini juga menyediakan layanan untuk melakukan pemesanan tiket online sehingga wisatawan dapat memesan dari jauh-jauh hari. Dengan sistem yang aman dan mudah digunakan, pengguna dapat memilih tanggal dan waktu yang diinginkan, serta mendapatkan konfirmasi pemesanan secara instan. Hal ini tentunya memberikan kenyamanan dan efisiensi bagi wisatawan yang ingin merencanakan perjalanan mereka tanpa harus khawatir tentang ketersediaan tiket.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src="/images/tentang-kami/image1.jpg" alt="Desa Wisata Wanurejo" class="w-full h-auto rounded-lg shadow-md">
         </div>
       </div>
     </div>
@@ -72,7 +91,7 @@
     <!-- Berita dan Event Section -->
     <div class="py-16 bg-gray-100">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Berita dan Event</h2>
+        <h2 class="text-3xl font-bold text-center mb-12" style="color: #1a1a1a;">Berita dan Event</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Event Card 1 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
@@ -105,33 +124,25 @@
     </div>
 
     <!-- Team Section -->
-    <div class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Team</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-          <!-- Team Member Cards -->
-          <div v-for="member in teamMembers" :key="member.name" class="text-center">
-            <img :src="member.image" :alt="member.name" class="w-32 h-32 rounded-full mx-auto mb-4">
-            <h3 class="font-bold">{{ member.name }}</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+   
 
-    <!-- Tentang Kami Section -->
-    <div class="py-16 bg-gray-100">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Tentang Kami</h2>
-        <p class="text-center max-w-3xl mx-auto">
-          Website Dewatari memberikan layanan yang dapat digunakan wisatawan untuk mengetahui informasi pada objek wisata dengan mudah. Serta dan perangnya. Website ini bertujuan untuk memberikan informasi kepada masyarakat. Melalui Website Dewatari akan mempermudah wisatawan dalam merencanakan perjalanan berwisata, dan juga website ini menyediakan layanan untuk melakukan pemesanan tiket online sehingga wisatawan dapat memesan dari jauh-jauh hari.
-        </p>
-      </div>
-    </div>
+    
 
     <!-- Footer -->
     <footer class="bg-[#1F1F1F] text-white py-8">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div class="md:col-span-2">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4728253308453!2d109.2231493!3d-7.4169842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e9f2c1d0b7b%3A0x9c8f7b59c125f397!2sTamansari%2C%20Karanglewas%2C%20Banyumas%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1637304675844!5m2!1sen!2sid"
+              width="100%" 
+              height="250" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+              class="rounded-lg"
+            ></iframe>
+          </div>
           <div>
             <img src="/path-to-logo.png" alt="Dewatari Logo" class="h-12 mb-4">
             <div class="flex space-x-4">
