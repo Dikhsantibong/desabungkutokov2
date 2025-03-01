@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <!-- Navbar -->
-    <nav class="bg-[#E49B0F] py-4">
+    <nav class="bg-[#0992d6] py-4">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
           <div class="text-2xl font-bold text-white">Pesona Bungkutoko</div>
@@ -74,7 +74,7 @@
       <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div class="w-full md:w-1/2 pr-4">
           <h2 class="text-3xl font-bold text-left mb-2" style="font-family: 'Inter', sans-serif; color: #323233; max-width: 80%;">Desa Wisata Bungkutoko</h2>
-          <span class="block w-1/9 h-1 bg-[#E49B0F] my-1 mb-7"></span>
+          <span class="block w-1/9 h-1 bg-[#0992d6] my-1 mb-7"></span>
           <p class="text-left max-w-3xl mx-auto mb-4" style="font-family: 'Noto Sans', sans-serif; color: #929394; font-size: 14px;">
             Website Pesona Bungkutoko memberikan layanan yang dapat digunakan wisatawan untuk mengetahui informasi pada objek wisata dengan mudah. Website ini bertujuan untuk memberikan informasi kepada masyarakat dan mempermudah wisatawan dalam merencanakan perjalanan berwisata. Dengan berbagai fitur yang ditawarkan, pengguna dapat dengan cepat menemukan informasi yang relevan dan terkini mengenai destinasi wisata, akomodasi, dan aktivitas yang tersedia. 
           </p>
@@ -123,55 +123,180 @@
       </div>
     </div>
 
-    <!-- Team Section -->
-   
+    <!-- Tour Packages Section -->
+    <div class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4" style="color: #1a1a1a;">Pesona Bungkutoko Tour Packages</h2>
+        <p class="text-center mb-12" style="font-family: 'Noto Sans', sans-serif; color: #929394;">~Kenangan Indah yang Tak Terlupakan Bersama Kami~</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Package Card 1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+            <img src="/images/packages/package1.jpg" alt="Package 1" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">Paket Wisata Keluarga</h3>
+              <p class="text-gray-600 mb-4">3 Hari 2 Malam</p>
+              <ul class="text-sm text-gray-600 mb-4">
+                <li class="mb-1">✓ Penginapan</li>
+                <li class="mb-1">✓ Makan 3x sehari</li>
+                <li class="mb-1">✓ Tour guide lokal</li>
+                <li class="mb-1">✓ Transportasi</li>
+              </ul>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-[#0992d6]">Rp 1.500.000</span>
+                <button class="bg-[#0992d6] text-white px-4 py-2 rounded hover:bg-[#0882c0]">Pesan Sekarang</button>
+              </div>
+            </div>
+          </div>
 
+          <!-- Package Card 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+            <img src="/images/packages/package2.jpg" alt="Package 2" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">Paket Honeymoon</h3>
+              <p class="text-gray-600 mb-4">2 Hari 1 Malam</p>
+              <ul class="text-sm text-gray-600 mb-4">
+                <li class="mb-1">✓ Villa romantis</li>
+                <li class="mb-1">✓ Candle light dinner</li>
+                <li class="mb-1">✓ Spa treatment</li>
+                <li class="mb-1">✓ Fotografi</li>
+              </ul>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-[#0992d6]">Rp 2.500.000</span>
+                <button class="bg-[#0992d6] text-white px-4 py-2 rounded hover:bg-[#0882c0]">Pesan Sekarang</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+            <img src="/images/packages/package3.jpg" alt="Package 3" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">Paket Petualangan</h3>
+              <p class="text-gray-600 mb-4">4 Hari 3 Malam</p>
+              <ul class="text-sm text-gray-600 mb-4">
+                <li class="mb-1">✓ Camping</li>
+                <li class="mb-1">✓ Hiking</li>
+                <li class="mb-1">✓ Rafting</li>
+                <li class="mb-1">✓ Peralatan lengkap</li>
+              </ul>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-[#0992d6]">Rp 3.000.000</span>
+                <button class="bg-[#0992d6] text-white px-4 py-2 rounded hover:bg-[#0882c0]">Pesan Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Packages Button -->
+        <div class="flex justify-center mt-12">
+          <button class="flex items-center bg-[#0992d6] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#0882c0]">
+            Lihat Semua Paket
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Galery Section -->
+    <div class=" bg-100 py-3 ">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4" style="color: #1a1a1a;">Foto Desa Kami</h2>
+        <p class="text-center mb-12" style="font-family: 'Noto Sans', sans-serif; color: #1a1a1a;">Lihatlah beberapa foto cantik yang diambil di desa indah kami</p>
+        <div class="grid grid-cols-12 gap-4">
+          <!-- Large image spanning 8 columns -->
+          <div class="col-span-8 bg-white rounded-lg overflow-hidden shadow-md">
+            <img src="/images/galery/galeri1.jpg" alt="Desa Foto 1" class="w-full h-[400px] object-cover">
+          </div>
+          
+          <!-- Two smaller images stacked vertically -->
+          <div class="col-span-4 grid grid-rows-2 gap-4">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="/images/galery/galeri2.jpg" alt="Desa Foto 2" class="w-full h-[190px] object-cover">
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+              <img src="/images/galery/galeri3.jpg" alt="Desa Foto 3" class="w-full h-[190px] object-cover">
+            </div>
+          </div>
+
+          <!-- Large image spanning 6 columns -->
+          <div class="col-span-6 bg-white rounded-lg overflow-hidden shadow-md">
+            <img src="/images/galery/galeri4.jpg" alt="Desa Foto 4" class="w-full h-[300px] object-cover">
+          </div>
+
+          <!-- Two smaller images side by side -->
+          <div class="col-span-3 bg-white rounded-lg overflow-hidden shadow-md">
+            <img src="/images/galery/galeri5.jpg" alt="Desa Foto 5" class="w-full h-[300px] object-cover">
+          </div>
+          <div class="col-span-3 bg-white rounded-lg overflow-hidden shadow-md">
+            <img src="/images/galery/galeri6.jpg" alt="Desa Foto 6" class="w-full h-[300px] object-cover">
+          </div>
+        </div>
+        <!-- Button to view more with icon -->
+        <div class="flex justify-center mt-8 ">
+          <button class="flex items-center bg-[#0992d6] text-white font-bold py-2 px-4 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Lihat Lebih Lanjut
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    
     
 
     <!-- Footer -->
     <footer class="bg-[#1F1F1F] text-white py-8">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
-          <div class="md:col-span-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="w-full h-[300px]">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4728253308453!2d109.2231493!3d-7.4169842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e9f2c1d0b7b%3A0x9c8f7b59c125f397!2sTamansari%2C%20Karanglewas%2C%20Banyumas%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1637304675844!5m2!1sen!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4728374253684!2d109.2231493!3d-7.4169397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e9bf2ba7c15%3A0x6e1c06c86459f22a!2sTamansari%2C%20Kec.%20Karanglewas%2C%20Kabupaten%20Banyumas%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1634567890123!5m2!1sid!2sid"
               width="100%" 
-              height="250" 
+              height="100%" 
               style="border:0;" 
               allowfullscreen="" 
               loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
               class="rounded-lg"
             ></iframe>
           </div>
-          <div>
-            <img src="/path-to-logo.png" alt="Dewatari Logo" class="h-12 mb-4">
-            <div class="flex space-x-4">
-              <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <img src="/path-to-logo.png" alt="Dewatari Logo" class="h-12 mb-4">
+              <div class="flex space-x-4">
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+              </div>
             </div>
-          </div>
-          <div>
-            <h4 class="font-bold mb-4">Dewatari</h4>
-            <ul>
-              <li>Petilasan Curungandul</li>
-              <li>Waduk Sempor</li>
-              <li>Asrama Budha</li>
-              <li>Embung Banasading</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold mb-4">Produk Wisata</h4>
-            <ul>
-              <li>Makanan Khas</li>
-              <li>Souvenir</li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold mb-4">Kontak</h4>
-            <p>Tamansari, Karanglewas, Banyumas, Jawa Tengah, 53161</p>
-            <p>dewatari@gmail.com</p>
-            <p>+62 812 7275 5504</p>
+            <div>
+              <h4 class="font-bold mb-4">Dewatari</h4>
+              <ul>
+                <li>Petilasan Curungandul</li>
+                <li>Waduk Sempor</li>
+                <li>Asrama Budha</li>
+                <li>Embung Banasading</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Produk Wisata</h4>
+              <ul>
+                <li>Makanan Khas</li>
+                <li>Souvenir</li>
+              </ul>
+            </div>
+            <div class="md:col-span-3">
+              <h4 class="font-bold mb-4">Kontak</h4>
+              <p>Tamansari, Karanglewas, Banyumas, Jawa Tengah, 53161</p>
+              <p>dewatari@gmail.com</p>
+              <p>+62 812 7275 5504</p>
+            </div>
           </div>
         </div>
       </div>
