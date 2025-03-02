@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <!-- Navbar -->
-    <nav class="bg-[#E49B0F] py-4">
+    <nav class="bg-[#0992d6] py-4">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
           <div class="text-2xl font-bold text-white">DEWATARI</div>

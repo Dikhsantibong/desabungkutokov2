@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <!-- Navbar -->
-    <nav class="bg-[#E49B0F] py-4">
+    <nav class="bg-[#0992d6] py-4">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
           <div class="text-2xl font-bold text-white">DEWATARI</div>
@@ -33,7 +33,7 @@
         </transition-group>
 
         <!-- Overlay Text -->
-        <div class="absolute inset-0 bg-opacity-40 flex flex-col items-center justify-center text-white z-5 rounded-lg" style="transform: translateY(120px);">
+        <div class="absolute inset-0 bg-opacity-40 flex flex-col items-center justify-center text-white z-5 rounded-lg" style="transform: translateY(180px);">
           <h1 class="text-5xl font-bold mb-4">PAKET WISATA</h1>
           <p class="text-xl">Pilih paket wisata sesuai kebutuhan Anda</p>
         </div>
