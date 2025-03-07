@@ -1,72 +1,47 @@
 <template>
   <div class="min-h-screen animate-fade-in">
+    <Navbar />
     <!-- Navbar -->
-    <nav class="bg-[#0992d6] py-4">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold text-white">Pesona Bungkutoko</div>
-          <div class="space-x-6">
-            <router-link to="/" class="text-white">Home</router-link>
-            <router-link to="/dewatari" class="text-white">Bungkutoko</router-link>
-            <router-link to="/produk-lokal" class="text-white">Produk Lokal</router-link>
-            <router-link to="/paket-tour" class="text-white">Paket Tour</router-link>
-            <router-link to="/informasi" class="text-white">Informasi</router-link>
-            <router-link to="/pembelian-tiket" class="text-white">Pembelian Tiket</router-link>
-          </div>
-        </div>
-      </div>
-    </nav>
+    
 
     <!-- Hero Section -->
-    <div class="relative h-[700px] p-10 animate-fade-in">
-      <div class="relative h-full max-w-[1300px] mx-auto">
-        <transition-group name="fade">
-          <img 
-            v-for="(image, index) in carouselImages" 
-            :key="image.id"
-            :src="image.src"
-            :alt="image.alt"
-            v-show="currentImage === index"
-            class="absolute w-full h-full object-cover transition-opacity duration-500 rounded-lg"
-            style="width: 1300px; height: 625px;"
-          >
-        </transition-group>
-
-        <!-- Carousel Navigation -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-          <button 
-            v-for="(image, index) in carouselImages" 
-            :key="index"
-            @click="currentImage = index"
-            class="w-3 h-3 rounded-full transition-all duration-300"
-            :class="currentImage === index ? 'bg-white' : 'bg-white/50'"
-          ></button>
-        </div>
-
-        <!-- Carousel Arrows -->
-        <button 
-          @click="prevImage" 
-          class="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-10"
+    <div class="relative h-screen">
+      <!-- Full-width background image -->
+      <div class="absolute inset-0">
+        <img 
+          :src="carouselImages[currentImage].src" 
+          :alt="carouselImages[currentImage].alt"
+          class="w-full h-full object-cover"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button 
-          @click="nextImage" 
-          class="absolute right-5 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-10"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        <!-- Overlay Text -->
-        <div class="absolute inset-0 bg-opacity-40 flex flex-col items-center justify-center text-white z-5 rounded-lg" style="transform: translateY(180px);">
-          <h1 class="text-5xl font-bold mb-4 shadow" style="font-family: 'Poppins', sans-serif;">SELAMAT DATANG</h1>
-          <p class="text-xl shadow" style="font-family: 'Poppins', sans-serif;">Pesona Bungkutoko sebagai wadah layanan untuk berwisata di Desai Taman Sari</p>
-        </div>
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/30"></div>
       </div>
+
+      <!-- Hero Content -->
+      <div class="absolute z-10 h-full flex flex-col justify-center items-start px-20 max-w-7xl mx-auto">
+        <h1 class="text-6xl font-bold text-white mb-4" style="font-family: 'Poppins', sans-serif;">
+          Pesona Bungkutoko
+        </h1>
+        <p class="text-xl text-white mb-8" style="font-family: 'Poppins', sans-serif;">
+          Wisata Bahari yang Indah dan Mempesona
+        </p>
+        <button class="bg-white bg-opacity-50 text-[#0992d6] px-8 py-3 rounded-md font-semibold hover:bg-[#0992d6] hover:text-white transition-colors duration-300">
+          RESERVASI SEKARANG
+        </button>
+      </div>
+
+      <!-- Carousel Navigation -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        <button 
+          v-for="(image, index) in carouselImages" 
+          :key="index"
+          @click="currentImage = index"
+          class="w-3 h-3 rounded-full transition-all duration-300"
+          :class="currentImage === index ? 'bg-white' : 'bg-white/50'"
+        ></button>
+      </div>
+
+     
     </div>
 
     <!-- Tentang Kami Section -->
@@ -78,10 +53,10 @@
           <h2 class="text-3xl font-bold text-left mb-2" style="font-family: 'Inter', sans-serif; color: #323233; max-width: 80%;">Desa Wisata Bungkutoko</h2>
           <span class="block w-1/9 h-1 bg-[#0992d6] my-1 mb-7"></span>
           <p class="text-left max-w-3xl mx-auto mb-4" style="font-family: 'Noto Sans', sans-serif; color: #929394; font-size: 14px;">
-            Website Pesona Bungkutoko memberikan layanan yang dapat digunakan wisatawan untuk mengetahui informasi pada objek wisata dengan mudah. Website ini bertujuan untuk memberikan informasi kepada masyarakat dan mempermudah wisatawan dalam merencanakan perjalanan berwisata. Dengan berbagai fitur yang ditawarkan, pengguna dapat dengan cepat menemukan informasi yang relevan dan terkini mengenai destinasi wisata, akomodasi, dan aktivitas yang tersedia. 
+            Desa Bungkutoko, yang terletak di Kecamatan Nambo, Kota Kendari, merupakan wilayah pesisir dengan potensi ekonomi dan wisata yang khas. Wilayah ini dikelilingi oleh perairan yang menjadi jalur utama aktivitas masyarakat, Bungkutoko memiliki sektor kelautan yang terus bertumbuh, terutama dalam bidang perikanan dan UMKM berbasis hasil laut. Keberadaan Jembatan Kuning Bungkutoko semakin meningkatkan mobilitas masyarakat dan mendukung pertumbuhan ekonomi lokal. 
           </p>
           <p class="text-left max-w-3xl mx-auto" style="font-family: 'Noto Sans', sans-serif; color: #929394; font-size: 14px;">
-            Selain itu, website ini juga menyediakan layanan untuk melakukan pemesanan tiket online sehingga wisatawan dapat memesan dari jauh-jauh hari. Dengan sistem yang aman dan mudah digunakan, pengguna dapat memilih tanggal dan waktu yang diinginkan, serta mendapatkan konfirmasi pemesanan secara instan. Hal ini tentunya memberikan kenyamanan dan efisiensi bagi wisatawan yang ingin merencanakan perjalanan mereka tanpa harus khawatir tentang ketersediaan tiket.
+            Masyarakatnya memiliki keterikatan kuat dengan budaya maritim, di mana pelaku UMKM, terutama perempuan pesisir, mengolah hasil laut menjadi produk bernilai tambah. Selain itu, Bungkutoko juga memiliki transportasi khas berupa taksi boat, yang tidak hanya berfungsi sebagai sarana mobilitas tetapi juga memiliki potensi besar dalam sektor pariwisata. Dengan berbagai keunggulan ini, Bungkutoko terus berkembang melalui program pemberdayaan masyarakat yang mendorong inovasi UMKM dan ekowisata, menjadikannya destinasi yang kaya akan budaya serta peluang ekonomi.
           </p>
         </div>
         <div class="w-full md:w-1/2">
@@ -344,7 +319,13 @@
 </template>
 
 <script>
+import Navbar from './Navbar.vue'
+
 export default {
+  name: 'Home',
+  components: {
+    Navbar
+  },
   data() {
     return {
       currentImage: 0,
@@ -371,9 +352,17 @@ export default {
         },
         {
           id: 5,
-          src: '/images/herosection/bg-hero2.jpg',
+          src: '/images/herosection/bg-hero5.jpeg',
           alt: 'Hero Image 5'
         }
+      ],
+      navItems: [
+        { name: 'Home', path: '/' },
+        { name: 'Bungkutoko', path: '/dewatari' },
+        { name: 'Produk Lokal', path: '/produk-lokal' },
+        { name: 'Paket Tour', path: '/paket-tour' },
+        { name: 'Informasi', path: '/informasi' },
+        { name: 'Pembelian Tiket', path: '/pembelian-tiket' }
       ],
       teamMembers: [
         { name: 'Asep Saefullah', image: '/path-to-asep-image.jpg' },
@@ -434,9 +423,10 @@ export default {
 </script>
 
 <style scoped>
-/* Tambahkan custom styles jika diperlukan */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 .router-link-active {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .fade-enter-active,

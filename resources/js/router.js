@@ -5,6 +5,10 @@ import ProdukLokal from './components/ProdukLokal.vue'
 import PaketTour from './components/PaketTour.vue'
 import Informasi from './components/Informasi.vue'
 import PembelianTiket from './components/PembelianTiket.vue'
+import Sejarah from './components/Sejarah.vue'
+import VisiMisi from './components/VisiMisi.vue'
+import GalleryFoto from './components/GalleryFoto.vue'
+import GalleryVideo from './components/GalleryVideo.vue'
 
 const routes = [
   {
@@ -36,6 +40,26 @@ const routes = [
     path: '/pembelian-tiket',
     name: 'pembelian-tiket',
     component: PembelianTiket
+  },
+  {
+    path: '/sejarah',
+    name: 'Sejarah',
+    component: Sejarah
+  },
+  {
+    path: '/visi-misi',
+    name: 'VisiMisi',
+    component: VisiMisi
+  },
+  {
+    path: '/gallery-foto',
+    name: 'GalleryFoto',
+    component: GalleryFoto
+  },
+  {
+    path: '/gallery-video',
+    name: 'GalleryVideo',
+    component: GalleryVideo
   }
 ]
 
