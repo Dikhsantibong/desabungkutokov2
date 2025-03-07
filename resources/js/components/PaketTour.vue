@@ -58,16 +58,19 @@
         <!-- Add your tour packages content here -->
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar.vue'
+import Footer from './Footer.vue'
 
 export default {
   name: 'PaketTour',
   components: {
-    Navbar
+    Navbar,
+    Footer
   },
   data() {
     return {

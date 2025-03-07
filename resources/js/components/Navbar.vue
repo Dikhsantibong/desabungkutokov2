@@ -1,9 +1,9 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 z-50 py-4 bg-transparent">
+  <nav class="absolute top-0 left-0 right-0 z-50 py-4 bg-transparent">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center">
         <div class="flex items-center">
-          <img src="/images/logo/logo.png" alt="Logo" class="h-24 mr-2">
+          <img src="/images/logo/logo.png" alt="Logo" class="h-16 mr-2">
         </div>
         <div class="flex items-center space-x-6">
           <router-link 
@@ -84,7 +84,7 @@
           </router-link>
 
           <!-- Gallery Dropdown -->
-          <div class="relative" @mouseenter="galleryOpen = true" @mouseleave="galleryOpen = false">
+          <div class="relative" @mouseenter="galleryOpen = true" @mouseleave="galleryOpen = true">
             <button 
               @click="toggleGalleryDropdown"
               class="text-white uppercase font-['Open_Sans'] text-[14px] tracking-wider transition-colors hover:text-[#0992d6] flex items-center"
@@ -115,7 +115,7 @@
               <router-link 
                 to="/gallery-video" 
                 class="block px-4 py-2 text-[14px] text-gray-700 hover:bg-gray-100 hover:text-[#0992d6]"
-                @click="galleryOpen = true"
+                @click="galleryOpen = false"
               >
                 GALLERY VIDEO
               </router-link>

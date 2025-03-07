@@ -12,7 +12,7 @@
         <div class="absolute inset-0 bg-black/30"></div>
       </div>
 
-      <div class="relative z-10 h-full flex flex-col justify-center items-start px-20 max-w-7xl mx-auto">
+      <div class="absolute z-10 h-full flex flex-col justify-center items-start px-20 max-w-7xl mx-auto">
         <h1 class="text-6xl font-bold text-white mb-4" style="font-family: 'Poppins', sans-serif;">
           Produk Lokal
         </h1>
@@ -32,23 +32,7 @@
         ></button>
       </div>
 
-      <!-- Carousel Arrows -->
-      <button 
-        @click="prevImage" 
-        class="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-10"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button 
-        @click="nextImage" 
-        class="absolute right-5 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-10"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
+    
     </div>
 
     <!-- Content Section -->
@@ -58,16 +42,19 @@
         <!-- Add your local products content here -->
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar.vue'
+import Footer from './Footer.vue'
 
 export default {
   name: 'ProdukLokal',
   components: {
-    Navbar
+    Navbar,
+    Footer
   },
   data() {
     return {
