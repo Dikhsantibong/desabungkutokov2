@@ -8,6 +8,8 @@ import PembelianTiket from './components/PembelianTiket.vue'
 import Sejarah from './components/Sejarah.vue'
 import VisiMisi from './components/VisiMisi.vue'
 import Login from './components/Login.vue'
+import Dashboard from './components/Dashboard.vue'
+
 
 const routes = [
   {
@@ -54,6 +56,11 @@ const routes = [
     path: '/visi-misi',
     name: 'VisiMisi',
     component: VisiMisi
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard
   }
 ]
 
