@@ -50,8 +50,9 @@
                     Produk Lokal Unggulan
                 </h2>
                 <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                    Nikmati berbagai produk lokal berkualitas dari Desa Bungkutoko. Setiap pembelian membantu mendukung pengrajin lokal
-                    kami.
+                    Nikmati berbagai produk lokal berkualitas dari Desa
+                    Bungkutoko. Setiap pembelian membantu mendukung pengrajin
+                    lokal kami.
                 </p>
 
                 <!-- Filter and Sort Section -->
